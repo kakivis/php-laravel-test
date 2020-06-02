@@ -19,4 +19,13 @@ class UserController extends Controller {
         $user = User::findOrFail($id);
         return view('user.show', ['user' => $user]);
     }
+
+    public function store() {
+        $user = new User();
+        $user->name = request('name');
+        $user->email = request('email');
+        $user->active = request('active') ?? 0;
+        $user->save();
+        return redirect('/users');
+    }
 }

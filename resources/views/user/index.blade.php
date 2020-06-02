@@ -6,6 +6,9 @@
         <div class="title m-b-md">
             User Report
         </div>
+        @foreach($users as $user)
+            <p>{{ $user->id }} | {{$user->name}} | {{$user->email}} | {{$user->active}}</p>
+        @endforeach
 
         <div class="links">
             <a href="/"><- Back to index</a>

@@ -20,4 +20,12 @@ class UserAccessController extends Controller
         $user_access = UserAccess::findOrFail($id);
         return view('user_access.show', ['user_access' => $user_access]);
     }
+
+    public function store() {
+        $user_access = new UserAccess();
+        $user_access->user_id = request('user_id');
+        $user_access->last_login = request('last_login');
+        $user_access->save();
+        return redirect('/user_accesses');
+    }
 }

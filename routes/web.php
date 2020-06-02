@@ -19,8 +19,10 @@ Route::get('/', function () {
 
 Route::get('/users', 'UserController@index');
 Route::get('/users/create', 'UserController@create');
+Route::post('/users', 'UserController@store');
 Route::get('/users/{id}', 'UserController@show');
 
 Route::get('/user_accesses', 'UserAccessController@index');
 Route::get('/user_accesses/create', 'UserAccessController@create');
+Route::post('/user_accesses', 'UserAccessController@store');
 Route::get('/user_accesses/{id}', 'UserAccessController@show');
