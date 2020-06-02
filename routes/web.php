@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('/user', 'UserController@index');
+Route::get('/user/create', 'UserController@create');
+Route::get('/user/{id}', 'UserController@show');
+
+Route::get('/user_access', 'UserAccessController@index');
+Route::get('/user_access/create', 'UserAccessController@create');
+Route::get('/user_access/{id}', 'UserAccessController@show');
