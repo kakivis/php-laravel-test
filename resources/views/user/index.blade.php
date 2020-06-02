@@ -8,6 +8,8 @@
         </div>
 
         <div class="links">
+            <a href="/"><- Back to index</a>
+            <a href="/users/create">Create new user</a>
         </div>
     </div>
 </div>
