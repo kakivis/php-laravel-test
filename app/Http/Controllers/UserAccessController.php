@@ -26,6 +26,6 @@ class UserAccessController extends Controller
         $user_access->user_id = request('user_id');
         $user_access->last_login = request('last_login');
         $user_access->save();
-        return redirect('/user_accesses');
+        return redirect('/user_accesses')->with(['msg' => 'User access created successfully']);
     }
 }

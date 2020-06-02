@@ -13,6 +13,7 @@
         <link href="/css/main.css" rel="stylesheet">
     </head>
     <body>
+        <p class="msg"> {{ session('msg') }}</p>
         @yield('content')
     </body>
 </html>

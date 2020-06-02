@@ -26,6 +26,6 @@ class UserController extends Controller {
         $user->email = request('email');
         $user->active = request('active') ?? 0;
         $user->save();
-        return redirect('/users');
+        return redirect('/users')->with(['msg' => 'User created successfully']);
     }
 }

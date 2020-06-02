@@ -6,6 +6,9 @@
         <div class="title m-b-md">
             User Access Report
         </div>
+        @foreach($user_accesses as $user_access)
+            <p>{{ $user_access->id }} | {{$user_access->user_id}} | {{$user_access->last_login}}</p>
+        @endforeach
 
         <div class="links">
             <a href="/"><- Back to index</a>
