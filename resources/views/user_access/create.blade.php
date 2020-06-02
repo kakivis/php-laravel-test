@@ -8,6 +8,7 @@
         </div>
 
         <div class="links">
+            <a href="/user_accesses"><- Back to all user accesses</a>
         </div>
     </div>
 </div>

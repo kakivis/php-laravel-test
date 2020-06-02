@@ -17,10 +17,10 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/user', 'UserController@index');
-Route::get('/user/create', 'UserController@create');
-Route::get('/user/{id}', 'UserController@show');
+Route::get('/users', 'UserController@index');
+Route::get('/users/create', 'UserController@create');
+Route::get('/users/{id}', 'UserController@show');
 
-Route::get('/user_access', 'UserAccessController@index');
-Route::get('/user_access/create', 'UserAccessController@create');
-Route::get('/user_access/{id}', 'UserAccessController@show');
+Route::get('/user_accesses', 'UserAccessController@index');
+Route::get('/user_accesses/create', 'UserAccessController@create');
+Route::get('/user_accesses/{id}', 'UserAccessController@show');

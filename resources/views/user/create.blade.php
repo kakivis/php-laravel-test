@@ -8,6 +8,7 @@
         </div>
 
         <div class="links">
+            <a href="/users"><- Back to all user</a>
         </div>
     </div>
 </div>
