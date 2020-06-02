@@ -7,7 +7,7 @@
             User Report
         </div>
         @foreach($users as $user)
-            <p>{{ $user->id }} | {{$user->name}} | {{$user->email}} | {{$user->active}}</p>
+            <p>{{ $user->id }} | {{$user->name}} | {{$user->email}} | {{$user->active}} | <a href="/users/{{ $user->id }}"> Show </a></p>
         @endforeach
 
         <div class="links">

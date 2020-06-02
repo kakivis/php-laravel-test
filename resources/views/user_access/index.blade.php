@@ -7,7 +7,7 @@
             User Access Report
         </div>
         @foreach($user_accesses as $user_access)
-            <p>{{ $user_access->id }} | {{$user_access->user_id}} | {{$user_access->last_login}}</p>
+            <p>{{ $user_access->id }} | {{$user_access->user_id}} | {{$user_access->last_login}} | <a href="/user_accesses/{{ $user_access->id }}"> Show </a></p>
         @endforeach
 
         <div class="links">
