@@ -11,8 +11,11 @@ html, body {
     height: 100vh;
 }
 
-.flex-center {
+.align-center {
     align-items: center;
+}
+
+.justified-flex {
     display: flex;
     justify-content: center;
 }
