@@ -6,9 +6,24 @@
         <div class="title m-b-md">
             User Report
         </div>
-        @foreach($users as $user)
-            <p>{{ $user->id }} | {{$user->name}} | {{$user->email}} | {{$user->active}} | <a href="/users/{{ $user->id }}"> Show </a></p>
-        @endforeach
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Active</th>
+                <th>Actions</th>
+            </tr>
+            @foreach($users as $user)
+                <tr>
+                    <td>{{ $user->id }}</td>
+                    <td>{{$user->name}}</td>
+                    <td>{{$user->email}}</td>
+                    <td>{{$user->active ? 'Active' : 'Inactive'}}</td>
+                    <td><a href="/users/{{ $user->id }}"> Show </a></td>
+                </tr>
+            @endforeach
+        </table>
 
         <div class="links">
             <a href="/"><- Back to index</a>

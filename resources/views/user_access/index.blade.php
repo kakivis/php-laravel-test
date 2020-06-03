@@ -6,9 +6,22 @@
         <div class="title m-b-md">
             User Access Report
         </div>
-        @foreach($user_accesses as $user_access)
-            <p>{{ $user_access->id }} | {{$user_access->user_id}} | {{$user_access->last_login}} | <a href="/user_accesses/{{ $user_access->id }}"> Show </a></p>
-        @endforeach
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>User Id</th>
+                <th>Last Login</th>
+                <th>Actions</th>
+            </tr>
+            @foreach($user_accesses as $user_access)
+                <tr>
+                    <td>{{$user_access->id }}</td>
+                    <td>{{$user_access->user_id}}</td>
+                    <td>{{$user_access->last_login}}</td>
+                    <td><a href="/user_accesses/{{ $user_access->id }}"> Show </a></td>
+                </tr>
+            @endforeach
+        </table>
 
         <div class="links">
             <a href="/"><- Back to index</a>
