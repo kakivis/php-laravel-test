@@ -9,6 +9,7 @@
         <div class="links">
             <a href="/users">Users Report</a>
             <a href="/user_accesses">User Accesses Report</a>
+            <a href="/composite_report">Composite Report</a>
         </div>
     </div>
 </div>

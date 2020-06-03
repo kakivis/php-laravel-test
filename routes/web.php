@@ -26,3 +26,5 @@ Route::get('/user_accesses', 'UserAccessController@index');
 Route::get('/user_accesses/create', 'UserAccessController@create');
 Route::post('/user_accesses', 'UserAccessController@store');
 Route::get('/user_accesses/{id}', 'UserAccessController@show');
+
+Route::get('/composite_report', 'CompositeReportController@index');
