@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class UserAccessController extends Controller
 {
     public function index() {
-        $user_accesses = UserAccess::all();
+        $user_accesses = UserAccess::paginate(10);
         return view('user_access.index', ['user_accesses' => $user_accesses]);
     }
 

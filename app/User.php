@@ -28,4 +28,9 @@ class User extends Model {
     {
         return $this->hasMany('App\UserAccess');
     }
+
+    public function scopeWithAndWhereHas($query, $relation, $constraint){
+        return $query->whereHas($relation, $constraint)
+            ->with([$relation => $constraint]);
+    }
 }

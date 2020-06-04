@@ -24,6 +24,7 @@
                 </tr>
             @endforeach
         </table>
+        {{ $users->links() }}
 
         <div class="links">
             <a href="/"><- Back to index</a>

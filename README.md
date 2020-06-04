@@ -14,4 +14,13 @@
 - Order by name ascending or descending
 
 #### Setup
-TO DO
+
+- Install Apache2
+- Install PHP 7.2
+- Install MySQL
+- Install Laravel 7.x
+- run "php artisan migrate"
+- run "php artisan db:seed"
+- run "php artisan serve"
+- Now you can see the server at localhost:8000
+- The report with all the searching and ordering features is the "Composite Report", the other two are just a simple CRUD.

@@ -22,6 +22,7 @@
                 </tr>
             @endforeach
         </table>
+        {{ $user_accesses->links() }}
 
         <div class="links">
             <a href="/"><- Back to index</a>

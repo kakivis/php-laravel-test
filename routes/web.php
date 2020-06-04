@@ -28,5 +28,6 @@ Route::post('/user_accesses', 'UserAccessController@store');
 Route::get('/user_accesses/{id}', 'UserAccessController@show');
 
 Route::get('/composite_report', 'CompositeReportController@index');
+Route::post('/composite_report', 'CompositeReportController@index');
 Route::get('/composite_report/most_logged', 'CompositeReportController@most_logged');
 Route::get('/composite_report/least_logged', 'CompositeReportController@least_logged');

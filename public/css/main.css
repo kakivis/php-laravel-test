@@ -96,3 +96,20 @@ tr:nth-child(even) {
     display: inline;
     float: right;
 }
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+ul > li {
+    margin-left: 5px;
+}
+
+.per-page {
+    margin: 16px 10px;
+}
+
+.pagination {
+    display: flex;
+}
