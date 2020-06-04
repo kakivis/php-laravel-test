@@ -10,21 +10,21 @@
                 <form class="search-bar" action="/composite_report" method="POST">
                     @csrf
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name" value="{{ $request['name'] }}">
                     <label for="email">Email:</label>
-                    <input type="text" id="email" name="email">
-                    <label for="status">Status:</label>
-                    <select id="status" name="status">
-                        <option value="">Any</option>
-                        <option value="1">Active</option>
-                        <option value="0">Inactive</option>
+                    <input type="text" id="email" name="email" value="{{ $request['email'] }}">
+                    <label for="active">Status:</label>
+                    <select id="active" name="active">
+                        <option value="" {{ strlen($request['active']) == 0 ? 'selected' : '' }}>Any</option>
+                        <option value="1" {{ $request['active'] === '1' ? 'selected' : '' }}>Active</option>
+                        <option value="0" {{ $request['active'] === '0' ? 'selected' : '' }}>Inactive</option>
                     </select>
                     <br>
                     <label for="start-date">Start date:</label>
-                    <input type="datetime-local" id="start-date" name="start_date">
+                    <input type="datetime-local" id="start-date" name="start_date" value="{{ $request['start_date'] }}">
                     <label for="end-date">End date:</label>
-                    <input type="datetime-local" id="end-date" name="end_date">
-                    <input type="hidden" id="per_page" name="per_page" value={{ $per_page ?? '' }}>
+                    <input type="datetime-local" id="end-date" name="end_date" value="{{ $request['end_date'] }}">
+                    <input type="hidden" id="per_page" name="per_page" value={{ $request['per_page'] ?? '' }}>
                     <input type="submit" value="Search">
                     <br>
                     <input class="align-left" type="button" value="Top 10 least logged in" onclick="window.location.href='/composite_report/least_logged'" />
@@ -53,17 +53,17 @@
                         @endforeach
                     </tbody>
                 </table>
-                @if(isset($per_page))
+                @if(isset($request['per_page']))
                     <div class="pagination">
                         {{ $users->links() }}
                         <form class="form-inline" method="GET" role="form">
                             <div class="per-page">
                                 <label for="per_page">Per Page:  </label>
                                 <select class="form-control" id="per_page" name="per_page" onchange="this.form.submit()">
-                                    <option value="10" {{$per_page == 10 ? 'selected' : ''}}>10</option>
-                                    <option value="20" {{$per_page == 20 ? 'selected' : ''}}>20</option>
-                                    <option value="30" {{$per_page == 30 ? 'selected' : ''}}>30</option>
-                                    <option value="100" {{$per_page == 100 ? 'selected' : ''}}>100</option>
+                                    <option value="10" {{ $request['per_page'] == 10 ? 'selected' : '' }}>10</option>
+                                    <option value="20" {{ $request['per_page'] == 20 ? 'selected' : '' }}>20</option>
+                                    <option value="30" {{ $request['per_page'] == 30 ? 'selected' : '' }}>30</option>
+                                    <option value="100" {{ $request['per_page'] == 100 ? 'selected' : '' }}>100</option>
                                 </select>
                             </div>
                         </form>
